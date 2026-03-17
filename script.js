@@ -8,78 +8,69 @@ const navLinks = document.querySelectorAll('.main-nav a, .hero-buttons a');
 
 const logo = document.querySelector('.logo');
 
-/* hide everything */
-
-function hideAllSections(){
-
-  sections.forEach(section=>{
-    section.style.display = "none";
-    section.classList.remove("show");
+function hideAllSections() {
+  sections.forEach(section => {
+    section.style.display = 'none';
+    section.classList.remove('show');
   });
 
-  hero.style.display = "none";
-  hero.classList.remove("show");
-
+  hero.style.display = 'none';
+  hero.classList.remove('show');
 }
 
-/* show selected section */
+function setActiveNav(targetId) {
+  const menuLinks = document.querySelectorAll('.main-nav a');
 
-function showSection(id){
+  menuLinks.forEach(link => {
+    link.classList.remove('active');
 
+    if (link.getAttribute('href') === targetId) {
+      link.classList.add('active');
+    }
+  });
+}
+
+function showSection(id) {
   hideAllSections();
 
-  if(id === "#hero"){
+  if (id === '#hero') {
+    hero.style.display = 'flex';
 
-    hero.style.display = "flex";
+    setTimeout(() => {
+      hero.classList.add('show');
+    }, 100);
 
-    setTimeout(()=>{
-      hero.classList.add("show");
-    },100);
-
+    setActiveNav('#hero');
     return;
-
   }
 
   const section = document.querySelector(id);
 
-  if(section){
+  if (section) {
+    section.style.display = 'block';
 
-    section.style.display = "block";
+    setTimeout(() => {
+      section.classList.add('show');
+    }, 100);
 
-    setTimeout(()=>{
-      section.classList.add("show");
-    },100);
-
+    setActiveNav(id);
   }
-
 }
 
-/* navigation links */
+navLinks.forEach(link => {
+  link.addEventListener('click', function(e) {
+    const target = this.getAttribute('href');
 
-navLinks.forEach(link=>{
-
-  link.addEventListener("click", function(e){
-
-    const target = this.getAttribute("href");
-
-    if(target.startsWith("#")){
+    if (target && target.startsWith('#')) {
       e.preventDefault();
       showSection(target);
     }
-
   });
-
 });
 
-/* logo reset */
-
-logo.addEventListener("click", function(e){
-
+logo.addEventListener('click', function(e) {
   e.preventDefault();
-  showSection("#hero");
-
+  showSection('#hero');
 });
 
-/* initial state */
-
-showSection("#hero");
+showSection('#hero');
