@@ -1,0 +1,2 @@
+- C/P tekst sa njihovog fb profila: https://www.facebook.com/profile.php?id=61578393569875
+- It should contain home, about, services, catalogue, contact
