@@ -236,7 +236,7 @@ p{
 }
 
 .hero-title{
-  font-size:clamp(3.8rem, 8vw, 7rem);
+  font-size:clamp(3rem, 6vw, 5rem);
   line-height:0.92;
   margin-bottom:26px;
   max-width:700px;
@@ -532,15 +532,16 @@ textarea{
 }
 
 .footer-container{
-  width:calc(100% - 48px);
-  margin:0 24px;
+  width:fit-content;
+  margin:0 auto;
+
   display:flex;
   align-items:center;
   justify-content:center;
   background:rgba(255,255,255,0.85);
   border:1px solid rgba(0,0,0,0.08);
   border-radius:18px;
-  padding:12px 26px;
+  padding:12px 20%;
   backdrop-filter:blur(10px);
   font-size:0.9rem;
 }
