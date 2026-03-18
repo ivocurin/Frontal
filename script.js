@@ -4,8 +4,7 @@ const sections = document.querySelectorAll(
   '.about-section, .products-section, .why-us-section, .gallery-section, .contact-section'
 );
 
-const navLinks = document.querySelectorAll('.main-nav a, .hero-buttons a');
-
+const navLinks = document.querySelectorAll('.main-nav a, .hero-buttons a, .site-footer a');
 const logo = document.querySelector('.logo');
 
 function hideAllSections() {
