@@ -234,7 +234,7 @@ p{
   display:grid;
   grid-template-columns:minmax(320px, 700px) 1fr;
   align-items:start;
-  gap:60px;
+  gap:10px;
 }
 
 .hero-content{
@@ -273,6 +273,8 @@ p{
 }
 
 .hero-features{
+  margin-left:-200px;
+  margin-top: 200px;
   display:grid;
   grid-template-columns:repeat(2, 1fr);
   gap:24px;
@@ -625,6 +627,8 @@ textarea{
 
   .hero-features{
     grid-template-columns:repeat(2, 1fr);
+    margin-left:0;
+    margin-top:10px;
   }
 }
 
