@@ -31,10 +31,8 @@ function setActiveNav(targetId) {
 }
 
 function showSection(id) {
-  window.scrollTo({
-    top: 0,
-    behavior: 'instant' 
-  });
+  // instant reset → prevents stutter
+  window.scrollTo(0, 0);
 
   hideAllSections();
 
@@ -62,6 +60,7 @@ function showSection(id) {
   }
 }
 
+// navigation links
 navLinks.forEach(link => {
   link.addEventListener('click', function(e) {
     const target = this.getAttribute('href');
@@ -73,9 +72,11 @@ navLinks.forEach(link => {
   });
 });
 
+// logo click
 logo.addEventListener('click', function(e) {
   e.preventDefault();
   showSection('#hero');
 });
 
+// initial load
 showSection('#hero');
