@@ -1,8 +1,15 @@
 fb profil: https://www.facebook.com/profile.php?id=61578393569875
 
-- 
+- Make 4 boxes in hero below 'hero', not on the right side (full screen)
 
-- It should contain home, about, services, catalogue, gallery, contact
+- Add share icon on top of the page
+
+- Add number, work hours/days on top of the page, make it without
+    background
+
+- Less padding on the page, letters closer to the edge
+
+- Make navbar letters bigger
 
 - Style the footer
 
@@ -16,6 +23,10 @@ fb profil: https://www.facebook.com/profile.php?id=61578393569875
 
 - How to make it so that when you send a message through the page
     it actually sends a legit email (or even better wapp?)
+
+- Add this line of code and a picture with a correct link for the
+    social media preview if someone links it:
+    <meta property="og:image" content="https://yourdomain.com/images/hero.jpg" />
 
 //////////////////////
 
