@@ -1,23 +1,25 @@
 fb profil: https://www.facebook.com/profile.php?id=61578393569875
 
-- Make 4 boxes in hero below 'hero', not on the right side (full screen)
+- Remove "katalog" and "kontakt" from hero, style the hero
+
+- Make a Frontal logo, style Frontal in navbar
 
 - Add share icon on top of the page
 
 - Make my background page in all sections
 
-- Make my picture from top to bottom of the page, without padding
+- Cjenik section in NavBar?
 
 - Add number, work hours/days on top of the page, make it without
     background
 
-- Less padding on the page, letters closer to the edge
+- 
 
-- Make navbar letters bigger
+- 
 
 - Style the footer
 
-- Remove link from footer, instead add "back to top" button in the footer
+- 
 
 - Update contact info
 
@@ -31,7 +33,7 @@ fb profil: https://www.facebook.com/profile.php?id=61578393569875
     it actually sends a legit email (or even better wapp?)
 
 - Add this line of code and a picture with a correct link for the
-    social media preview if someone links it:
+    social media preview if someone links it (it should be Frontal + logo):
     <meta property="og:image" content="https://yourdomain.com/images/hero.jpg" />
 
 //////////////////////
