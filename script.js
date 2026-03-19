@@ -31,15 +31,15 @@ function setActiveNav(targetId) {
 }
 
 function showSection(id) {
+  window.scrollTo({
+    top: 0,
+    behavior: 'instant' 
+  });
+
   hideAllSections();
 
   if (id === '#hero') {
     hero.style.display = 'flex';
-
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
 
     setTimeout(() => {
       hero.classList.add('show');
@@ -53,11 +53,6 @@ function showSection(id) {
 
   if (section) {
     section.style.display = 'block';
-
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
 
     setTimeout(() => {
       section.classList.add('show');

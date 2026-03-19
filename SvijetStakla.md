@@ -4,6 +4,10 @@ fb profil: https://www.facebook.com/profile.php?id=61578393569875
 
 - Add share icon on top of the page
 
+- Make my background page in all sections
+
+- Make my picture from top to bottom of the page, without padding
+
 - Add number, work hours/days on top of the page, make it without
     background
 
