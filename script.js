@@ -1,10 +1,11 @@
 const hero = document.querySelector('.hero-section');
 
 const sections = document.querySelectorAll(
-  '.about-section, .products-section, .why-us-section, .gallery-section, .contact-section'
+  '.about-section, .services-section, .catalogue-section, .gallery-section, .contact-section'
 );
 
 const navLinks = document.querySelectorAll('.main-nav a, .hero-buttons a, .site-footer a');
+
 const logo = document.querySelector('.logo');
 
 function hideAllSections() {
@@ -34,7 +35,11 @@ function showSection(id) {
 
   if (id === '#hero') {
     hero.style.display = 'flex';
-    window.scrollTo(0, 0);
+
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
 
     setTimeout(() => {
       hero.classList.add('show');
@@ -48,6 +53,11 @@ function showSection(id) {
 
   if (section) {
     section.style.display = 'block';
+
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
 
     setTimeout(() => {
       section.classList.add('show');
