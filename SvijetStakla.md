@@ -17,6 +17,8 @@ fb profil: https://www.facebook.com/profile.php?id=61578393569875
 
 - Style the footer
 
+- Remove link from footer, instead add "back to top" button in the footer
+
 - Update contact info
 
 - Make web page in english and croatian
