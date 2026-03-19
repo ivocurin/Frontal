@@ -10,7 +10,7 @@
   --hero-top-padding: 150px;
   --hero-bottom-padding: 20px;
   --hero-left-offset: 0px;
-  --nav-font-size: 0.96rem;
+  --nav-font-size: 1.5rem;
 }
 
 html, body{
@@ -713,5 +713,27 @@ textarea{
 
   .back-to-top-btn{
     padding:12px 18px;
+  }
+}
+
+/* NAV FIX */
+@media (max-width:1100px){
+  .main-nav a{
+    font-size:0.9rem;
+  }
+
+  .main-nav .nav-list{
+    gap:20px;
+  }
+}
+
+@media (max-width:820px){
+  .main-nav a{
+    font-size:0.85rem;
+  }
+
+  .main-nav .nav-list{
+    gap:12px 18px;
+    flex-wrap:wrap;
   }
 }
