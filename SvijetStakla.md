@@ -1,6 +1,8 @@
-- C/P tekst sa njihovog fb profila: https://www.facebook.com/profile.php?id=61578393569875
+fb profil: https://www.facebook.com/profile.php?id=61578393569875
 
-- It should contain home, about, services, catalogue, contact
+- 
+
+- It should contain home, about, services, catalogue, gallery, contact
 
 - Style the footer
 
@@ -12,7 +14,8 @@
 
 - TAKE PICTURES (PROFILES, DOORS, GLASS, CERAMICS, PROJECTS, ostale stvari sta prodaju)
 
-- 
+- How to make it so that when you send a message through the page
+    it actually sends a legit email (or even better wapp?)
 
 //////////////////////
 

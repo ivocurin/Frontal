@@ -34,6 +34,7 @@ function showSection(id) {
 
   if (id === '#hero') {
     hero.style.display = 'flex';
+    window.scrollTo(0, 0);
 
     setTimeout(() => {
       hero.classList.add('show');
