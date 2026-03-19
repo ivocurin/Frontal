@@ -79,4 +79,39 @@ logo.addEventListener('click', function(e) {
 });
 
 // initial load
+
 showSection('#hero');
+
+window.addEventListener('scroll', function () {
+  const footer = document.querySelector('.site-footer');
+
+  const scrollTop = window.scrollY;
+  const windowHeight = window.innerHeight;
+  const docHeight = document.documentElement.scrollHeight;
+
+  // if near bottom (within 50px)
+  if (scrollTop + windowHeight >= docHeight - 50) {
+    footer.classList.add('show');
+  } else {
+    footer.classList.remove('show');
+  }
+});
+
+const footer = document.querySelector('.site-footer');
+
+function toggleFooterVisibility() {
+  const scrollTop = window.scrollY;
+  const windowHeight = window.innerHeight;
+  const docHeight = document.documentElement.scrollHeight;
+
+  if (scrollTop + windowHeight >= docHeight - 20) {
+    footer.classList.add('show');
+  } else {
+    footer.classList.remove('show');
+  }
+}
+
+window.addEventListener('scroll', toggleFooterVisibility);
+window.addEventListener('resize', toggleFooterVisibility);
+
+toggleFooterVisibility();
