@@ -5,8 +5,11 @@ const sections = document.querySelectorAll(
 );
 
 const navLinks = document.querySelectorAll('.main-nav a, .hero-buttons a, .site-footer a');
+const menuLinks = document.querySelectorAll('.main-nav a');
 
 const logo = document.querySelector('.logo');
+const header = document.querySelector('.site-header');
+const footer = document.querySelector('.site-footer');
 
 function hideAllSections() {
   sections.forEach(section => {
@@ -16,11 +19,11 @@ function hideAllSections() {
 
   hero.style.display = 'none';
   hero.classList.remove('show');
+
+  header.classList.remove('show');
 }
 
 function setActiveNav(targetId) {
-  const menuLinks = document.querySelectorAll('.main-nav a');
-
   menuLinks.forEach(link => {
     link.classList.remove('active');
 
@@ -31,7 +34,6 @@ function setActiveNav(targetId) {
 }
 
 function showSection(id) {
-  // instant reset → prevents stutter
   window.scrollTo(0, 0);
 
   hideAllSections();
@@ -41,6 +43,7 @@ function showSection(id) {
 
     setTimeout(() => {
       hero.classList.add('show');
+      header.classList.add('show');
     }, 100);
 
     setActiveNav('#hero');
@@ -54,15 +57,15 @@ function showSection(id) {
 
     setTimeout(() => {
       section.classList.add('show');
+      header.classList.add('show');
     }, 100);
 
     setActiveNav(id);
   }
 }
 
-// navigation links
 navLinks.forEach(link => {
-  link.addEventListener('click', function(e) {
+  link.addEventListener('click', function (e) {
     const target = this.getAttribute('href');
 
     if (target && target.startsWith('#')) {
@@ -72,32 +75,10 @@ navLinks.forEach(link => {
   });
 });
 
-// logo click
-logo.addEventListener('click', function(e) {
+logo.addEventListener('click', function (e) {
   e.preventDefault();
   showSection('#hero');
 });
-
-// initial load
-
-showSection('#hero');
-
-window.addEventListener('scroll', function () {
-  const footer = document.querySelector('.site-footer');
-
-  const scrollTop = window.scrollY;
-  const windowHeight = window.innerHeight;
-  const docHeight = document.documentElement.scrollHeight;
-
-  // if near bottom (within 50px)
-  if (scrollTop + windowHeight >= docHeight - 50) {
-    footer.classList.add('show');
-  } else {
-    footer.classList.remove('show');
-  }
-});
-
-const footer = document.querySelector('.site-footer');
 
 function toggleFooterVisibility() {
   const scrollTop = window.scrollY;
@@ -114,4 +95,5 @@ function toggleFooterVisibility() {
 window.addEventListener('scroll', toggleFooterVisibility);
 window.addEventListener('resize', toggleFooterVisibility);
 
+showSection('#hero');
 toggleFooterVisibility();
