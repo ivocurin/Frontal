@@ -274,7 +274,7 @@ p{
     url("images/hero-placeholder.jpg");
 
   background-size:cover;
-  background-position:center;
+  background-position: 0 0, center calc(50% + 50px);
   background-repeat:no-repeat;
 }
 
