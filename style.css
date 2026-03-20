@@ -792,18 +792,69 @@ textarea{
 }
 
 @media (max-width:560px){
+  .site-header{
+    position:relative;
+  }
+
+  .header-container{
+    display:grid;
+    grid-template-columns:1fr auto;
+    align-items:center;
+    gap:12px;
+    padding:16px 0;
+  }
+
+  .logo{
+    justify-self:start;
+  }
+
   .logo img{
     height:44px;
   }
 
+  .menu-toggle{
+    display:block;
+    justify-self:end;
+    background:none;
+    border:none;
+    padding:8px;
+    cursor:pointer;
+  }
+
+  .menu-toggle span{
+    display:block;
+    width:26px;
+    height:3px;
+    margin:5px 0;
+    background:#1f1f1f;
+    border-radius:2px;
+  }
+
+  .main-nav{
+    display:none;
+    grid-column:1 / -1;
+    width:100%;
+    margin:0;
+  }
+
+  .main-nav.active{
+    display:block;
+  }
+
   .main-nav .nav-list{
+    display:flex;
     flex-direction:column;
     align-items:center;
-    gap:10px;
+    gap:14px;
+    padding:20px 0 10px;
   }
 
   .main-nav a{
     font-size:0.95rem;
+  }
+
+  .header-info{
+    display:none;
   }
 
   .catalogue-grid,
@@ -845,4 +896,22 @@ textarea{
   .back-to-top-btn{
     padding:12px 18px;
   }
+}
+
+.menu-toggle{
+  display:none;
+  background:none;
+  border:none;
+  padding:8px;
+  cursor:pointer;
+  z-index:1001;
+}
+
+.menu-toggle span{
+  display:block;
+  width:26px;
+  height:3px;
+  margin:5px 0;
+  background:#1f1f1f;
+  border-radius:2px;
 }

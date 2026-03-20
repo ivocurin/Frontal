@@ -94,3 +94,15 @@ window.addEventListener('resize', toggleFooterVisibility);
 
 showSection('#hero');
 toggleFooterVisibility();
+
+const menuToggle = document.querySelector(".menu-toggle");
+const mainNav = document.querySelector(".main-nav");
+
+if (menuToggle && mainNav) {
+  menuToggle.addEventListener("click", () => {
+    mainNav.classList.toggle("active");
+
+    const isOpen = mainNav.classList.contains("active");
+    menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+}
