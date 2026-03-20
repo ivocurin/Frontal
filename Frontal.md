@@ -2,11 +2,11 @@ fb profil: https://www.facebook.com/profile.php?id=61578393569875
 
 - Remove "katalog" and "kontakt" from hero, style the hero
 
-- Make a Frontal logo, style Frontal in navbar
+- 
 
 - Add share icon on top of the page
 
-- Make my background page in all sections
+- Add different picture to each section
 
 - Cjenik section in NavBar?
 
