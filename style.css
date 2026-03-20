@@ -138,13 +138,14 @@ p{
   background:transparent;
   backdrop-filter:none;
   border-bottom:none;
+  height:10px;
 }
 
 .header-container{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:26px 0;
+  padding:30px 0;
 }
 
 .logo{
@@ -153,12 +154,21 @@ p{
   letter-spacing:-0.05em;
   color:#181715;
   transition:opacity 0.25s ease, transform 0.25s ease;
+  display:flex;
+  align-items:center;
+  height:100%;
 }
 
 .logo:hover{
   opacity:0.7;
   transform:translateY(-1px);
   cursor:pointer;
+}
+
+.logo img{
+  height:60px;
+  width:auto;
+  display:block;
 }
 
 .main-nav .nav-list{
