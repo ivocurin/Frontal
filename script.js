@@ -20,7 +20,6 @@ function hideAllSections() {
   hero.style.display = 'none';
   hero.classList.remove('show');
 
-  header.classList.remove('show');
 }
 
 function setActiveNav(targetId) {
@@ -43,7 +42,6 @@ function showSection(id) {
 
     setTimeout(() => {
       hero.classList.add('show');
-      header.classList.add('show');
     }, 100);
 
     setActiveNav('#hero');
@@ -57,7 +55,6 @@ function showSection(id) {
 
     setTimeout(() => {
       section.classList.add('show');
-      header.classList.add('show');
     }, 100);
 
     setActiveNav(id);

@@ -138,12 +138,6 @@ p{
   background:transparent;
   backdrop-filter:none;
   border-bottom:none;
-  opacity:0;
-  transform:translateY(20px);
-}
-
-.site-header.show{
-  animation:fadeSection 0.5s ease forwards;
 }
 
 .header-container{
