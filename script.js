@@ -11,6 +11,19 @@ const logo = document.querySelector('.logo');
 const header = document.querySelector('.site-header');
 const footer = document.querySelector('.site-footer');
 
+const menuToggle = document.querySelector('.menu-toggle');
+const mainNav = document.querySelector('.main-nav');
+
+function closeMobileMenu() {
+  if (mainNav) {
+    mainNav.classList.remove('active');
+  }
+
+  if (menuToggle) {
+    menuToggle.setAttribute('aria-expanded', 'false');
+  }
+}
+
 function hideAllSections() {
   sections.forEach(section => {
     section.style.display = 'none';
@@ -19,7 +32,6 @@ function hideAllSections() {
 
   hero.style.display = 'none';
   hero.classList.remove('show');
-
 }
 
 function setActiveNav(targetId) {
@@ -45,6 +57,7 @@ function showSection(id) {
     }, 100);
 
     setActiveNav('#hero');
+    closeMobileMenu();
     return;
   }
 
@@ -58,6 +71,7 @@ function showSection(id) {
     }, 100);
 
     setActiveNav(id);
+    closeMobileMenu();
   }
 }
 
@@ -92,17 +106,23 @@ function toggleFooterVisibility() {
 window.addEventListener('scroll', toggleFooterVisibility);
 window.addEventListener('resize', toggleFooterVisibility);
 
-showSection('#hero');
-toggleFooterVisibility();
-
-const menuToggle = document.querySelector(".menu-toggle");
-const mainNav = document.querySelector(".main-nav");
-
 if (menuToggle && mainNav) {
-  menuToggle.addEventListener("click", () => {
-    mainNav.classList.toggle("active");
+  menuToggle.addEventListener('click', () => {
+    mainNav.classList.toggle('active');
 
-    const isOpen = mainNav.classList.contains("active");
-    menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    const isOpen = mainNav.classList.contains('active');
+    menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  document.addEventListener('click', (e) => {
+    const clickedToggle = menuToggle.contains(e.target);
+    const clickedNav = mainNav.contains(e.target);
+
+    if (!clickedToggle && !clickedNav) {
+      closeMobileMenu();
+    }
   });
 }
+
+showSection('#hero');
+toggleFooterVisibility();
