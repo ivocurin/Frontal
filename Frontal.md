@@ -1,8 +1,8 @@
 fb profil: https://www.facebook.com/profile.php?id=61578393569875
 
-- Kinda fixed the 560px version, but it needs styling
+- 
 
-- #test
+- 
 
 - Add share icon on top of the page
 
@@ -16,11 +16,11 @@ fb profil: https://www.facebook.com/profile.php?id=61578393569875
 
 - 
 
-- Style the footer
+- Style the footer 
 
 - 
 
-- Update contact info
+- Update contact info, change phone number in header-info
 
 - Make web page in english and croatian
 

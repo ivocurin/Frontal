@@ -549,8 +549,9 @@ p{
 
 .gallery-item img{
   height:290px;
-  object-fit:cover;
+  object-fit:contain;
   transition:transform 0.45s ease;
+  background: #f0ece6;
 }
 
 .gallery-item:hover img{
