@@ -868,7 +868,17 @@ textarea{
   }
 
   .header-info{
-    display:none;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-self:left;
+    width:auto;
+    max-width:max-content;
+    grid-column:1 / -1;
+    gap:4px;
+    padding:8px 14px;
+    border-radius:14px;
+    background:#f2eee8;
   }
 
   .catalogue-grid,
@@ -909,6 +919,33 @@ textarea{
 
   .back-to-top-btn{
     padding:12px 18px;
+  }
+
+  .hero-content{
+  padding-top: 10px;
+  }
+
+  .hero-section{
+  padding-top: 30px;
+  }
+
+  .site-footer{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:auto;
+    left:auto;
+    right:auto;
+    bottom:auto;
+    margin-top:0;
+    padding:0;
+    background:transparent;
+  }
+
+
+  .footer-container{
+    margin-bottom:0;
   }
 }
 

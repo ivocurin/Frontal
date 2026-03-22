@@ -1,6 +1,6 @@
 fb profil: https://www.facebook.com/profile.php?id=61578393569875
 
-- Remove "katalog" and "kontakt" from hero, style the hero
+- Kinda fixed the 560px version, but it needs styling
 
 - 
 
@@ -10,8 +10,7 @@ fb profil: https://www.facebook.com/profile.php?id=61578393569875
 
 - Cjenik section in NavBar?
 
-- Add number, work hours/days on top of the page, make it without
-    background
+- 
 
 - 
 
