@@ -1,8 +1,8 @@
 fb profil: https://www.facebook.com/profile.php?id=61578393569875
 
-- 
+- change footer background in mobile version (outside of footer cloudy thingy) to #f0ece6
 
-- 
+- Make footer stuck to bottom in other versions (tablet, full screen)?
 
 - Add share icon on top of the page
 
@@ -16,7 +16,7 @@ fb profil: https://www.facebook.com/profile.php?id=61578393569875
 
 - 
 
-- Style the footer 
+- Style the footer? 
 
 - 
 

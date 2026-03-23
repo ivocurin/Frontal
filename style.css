@@ -11,6 +11,9 @@
   --hero-bottom-padding: 20px;
   --hero-left-offset: 0px;
   --nav-font-size: 1.5rem;
+  --language-to-header-gap: 18px;
+  --language-item-gap: 8px;
+  --language-flag-text-gap: 8px;
 }
 
 html, body{
@@ -248,6 +251,38 @@ p{
 .main-nav a:hover,
 .main-nav a.active{
   color:#111;
+}
+
+.header-meta{
+  display:flex;
+  align-items:flex-start;
+  gap:var(--language-to-header-gap);
+}
+
+.language-switcher{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:var(--language-item-gap);
+  white-space:nowrap;
+}
+
+.language-link{
+  display:inline-flex;
+  align-items:center;
+  gap:var(--language-flag-text-gap);
+  font-size:0.95rem;
+  font-weight:600;
+  color:#1c1b19;
+}
+
+.language-link:hover{
+  opacity:0.7;
+}
+
+.flag{
+  font-size:1rem;
+  line-height:1;
 }
 
 /* ---------- HERO ---------- */
@@ -718,7 +753,7 @@ textarea{
     display:grid;
     grid-template-columns:auto 1fr auto;
     align-items:center;
-    column-gap:24px;
+    column-gap:18px;
   }
 
   .main-nav{
@@ -730,11 +765,12 @@ textarea{
     display:flex;
     justify-content:center;
     align-items:center;
-    gap:18px;
+    gap:12px;
   }
 
   .main-nav a{
-    font-size:1rem;
+    font-size:0.95rem;
+    white-space:nowrap;
   }
 
   .logo img{
@@ -759,6 +795,7 @@ textarea{
   }
 
   .header-container{
+    display:flex;
     flex-direction:column;
     align-items:center;
     gap:14px;
@@ -784,6 +821,7 @@ textarea{
 
   .main-nav a{
     font-size:0.9rem;
+    white-space:nowrap;
   }
 
   .header-info{
@@ -966,11 +1004,19 @@ textarea{
     bottom:auto;
     margin-top:0;
     padding:0;
-    background:transparent;
+    background:#f0ece6;
   }
 
   .footer-container{
     margin-bottom:0;
+  }
+
+  .header-meta{
+  display:flex;
+  align-items:flex-start;
+  justify-self:start;
+  grid-column:1 / -1;
+  gap:var(--language-to-header-gap);
   }
 }
 
