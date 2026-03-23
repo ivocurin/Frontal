@@ -280,9 +280,14 @@ p{
   opacity:0.7;
 }
 
-.flag{
-  font-size:1rem;
-  line-height:1;
+.flag-icon{
+  width:22px;
+  height:15px;
+  object-fit:cover;
+  display:block;
+  border-radius:2px;
+  box-shadow:0 0 0 1px rgba(0,0,0,0.12);
+  flex-shrink:0;
 }
 
 /* ---------- HERO ---------- */
